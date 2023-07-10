@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com-->
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Personal Info </title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="{% static 'style1.css' %}">
+                
+        <!-- Boxicons CSS -->
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+                        
+    </head>
+    <body>
+        <section class="container forms">
+            <div class="form login">
+                <div class="form-content">
+                    <header>Personal Info</header>
+                    <form action="#" method = "post">
+                        {% csrf_token %}
+                        <div class="field input-field">
+                            <input type="text" placeholder="First Name" name = "fname" class="input" required>
+                        </div>
+                        <div class="field input-field">
+                            <input type="text" placeholder="Last Name" name = "lname" class="input" required>
+                        </div>
+                        <div class="field input-field">
+                            <input type="text" placeholder="Phone Number" name = "number" class="input" required>
+                        </div>
+                        <div class="field input-field">
+                            <input type="text" placeholder="Address" name = "address" class="input" rows = "6" required>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                <label class="form-check-label" for="invalidCheck">
+                          Agree to terms and conditions
+                        </label>
+                            </div>
+                        </div>
+                        <div class="field button-field">
+                            <button>Proceed to payment</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Signup Form -->
+        </section>
+
+        <!-- JavaScript -->
+        <script src="script1.js">       </script>
+    </body>
+</html>
